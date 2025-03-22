@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CuidadoAutomotrizApp.Pages.ServicePage"
+             Title="Servicios">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Título Principal -->
+            <Label 
+                Text="Servicio de Sensor Motors"
+                Style="{StaticResource TitleLabel}"/>
+
+            <!-- Características Principales -->
+            <Label 
+                Text="Características Principales"
+                Style="{StaticResource SubtitleLabel}"/>
+
+            <!-- Alertas de Mantenimiento -->
+            <Frame Style="{StaticResource CardFrame}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Alertas de Mantenimiento"
+                        Style="{StaticResource SubtitleLabel}"
+                        TextColor="{StaticResource Primary}"/>
+                    
+                    <Label Text="Recibe notificaciones sobre el estado de tu automóvil, incluyendo:"
+                           Style="{StaticResource BodyLabel}"/>
+                    
+                    <StackLayout Margin="15,0,0,0" Spacing="5">
+                        <Label Text="• Falta de combustible"
+                               Style="{StaticResource BodyLabel}"/>
+                        <Label Text="• Niveles críticos de aceite del motor y transmisión"
+                               Style="{StaticResource BodyLabel}"/>
+                        <Label Text="• Fallas en sensores"
+                               Style="{StaticResource BodyLabel}"/>
+                        <Label Text="• Falta de agua o anticongelante"
+                               Style="{StaticResource BodyLabel}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Recomendaciones Personalizadas -->
+            <Frame Style="{StaticResource CardFrame}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Recomendaciones Personalizadas"
+                        Style="{StaticResource SubtitleLabel}"
+                        TextColor="{StaticResource Primary}"/>
+                    
+                    <Label Style="{StaticResource BodyLabel}">
+                        <Label.Text>
+Basado en las alertas recibidas, te sugerimos los mejores productos para tu vehículo, asegurando que elijas opciones de calidad que no causen más fallas.
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <!-- Ubicación de Proveedores -->
+            <Frame Style="{StaticResource CardFrame}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Ubicación de Proveedores"
+                        Style="{StaticResource SubtitleLabel}"
+                        TextColor="{StaticResource Primary}"/>
+                    
+                    <Label Style="{StaticResource BodyLabel}">
+                        <Label.Text>
+Te mostramos los lugares más cercanos y confiables donde puedes adquirir los productos recomendados, facilitando tu experiencia de compra.
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <!-- Asesoramiento Personalizado -->
+            <Frame Style="{StaticResource CardFrame}" BackgroundColor="{StaticResource LightGray}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Asesoramiento Personalizado"
+                        Style="{StaticResource SubtitleLabel}"/>
+                    
+                    <Label Style="{StaticResource BodyLabel}">
+                        <Label.Text>
+Si necesitas un asesoramiento más profundo, puedes llamarnos al siguiente número:
+                        </Label.Text>
+                    </Label>
+                    
+                    <Label 
+                        Text="+52 7221138351"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Primary}"
+                        FontSize="18"
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Botón para ir a Contacto -->
+            <Button 
+                Text="Ir a Contacto"
+                Style="{StaticResource PrimaryButton}"
+                Clicked="OnContactoClicked"
+                Margin="0,20,0,40"/>
+
+            <!-- Indicador de Actividad -->
+            <ActivityIndicator 
+                x:Name="LoadingIndicator"
+                IsRunning="False"
+                IsVisible="False"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
