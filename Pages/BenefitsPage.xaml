@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CuidadoAutomotrizApp.Pages.BenefitsPage"
+             Title="Beneficios">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Título -->
+            <Label 
+                Text="Beneficios"
+                Style="{StaticResource TitleLabel}"/>
+
+            <!-- Beneficios en Frames -->
+            <Frame Style="{StaticResource CardFrame}">
+                <Label 
+                    Text="Mantén tu automóvil en excelente estado y evita sorpresas en la carretera."
+                    Style="{StaticResource BodyLabel}"/>
+            </Frame>
+
+            <Frame Style="{StaticResource CardFrame}">
+                <Label 
+                    Text="Ahorra tiempo y esfuerzo al encontrar productos y servicios recomendados."
+                    Style="{StaticResource BodyLabel}"/>
+            </Frame>
+
+            <Frame Style="{StaticResource CardFrame}">
+                <Label 
+                    Text="Disfruta de una experiencia de conducción más segura y confiable."
+                    Style="{StaticResource BodyLabel}"/>
+            </Frame>
+
+            <!-- Sección de Asesoramiento Personalizado -->
+            <Frame Style="{StaticResource CardFrame}" BackgroundColor="{StaticResource LightGray}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Asesoramiento Personalizado"
+                        Style="{StaticResource SubtitleLabel}"/>
+                    <Label 
+                        Text="Si necesitas un asesoramiento más profundo, puedes llamarnos al siguiente número:"
+                        Style="{StaticResource BodyLabel}"/>
+                    <Label 
+                        Text="+52 7221138351"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource Primary}"
+                        FontSize="18"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección Encuentra un Mecánico -->
+            <Frame Style="{StaticResource CardFrame}" BackgroundColor="{StaticResource LightGray}">
+                <StackLayout Spacing="10">
+                    <Label 
+                        Text="Encuentra un Mecánico Cercano"
+                        Style="{StaticResource SubtitleLabel}"/>
+                    <Button 
+                        Text="Buscar Mecánico"
+                        Style="{StaticResource PrimaryButton}"
+                        Clicked="OnBuscarMecanicoClicked"/>
+                    <Label 
+                        Text="Usar mi Ubicación"
+                        Style="{StaticResource BodyLabel}"
+                        HorizontalTextAlignment="Center"
+                        TextColor="{StaticResource Primary}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Botón Continuar -->
+            <Button 
+                Text="Continuar"
+                Style="{StaticResource PrimaryButton}"
+                Clicked="OnContinuarClicked"
+                Margin="0,20,0,40"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
