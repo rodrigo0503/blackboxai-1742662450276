@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CuidadoAutomotrizApp.Pages.PrivacyPolicyPage"
+             Title="Aviso de Privacidad">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Título -->
+            <Label 
+                Text="Aviso de Privacidad"
+                Style="{StaticResource TitleLabel}"/>
+
+            <!-- Contenido del Aviso -->
+            <Frame Style="{StaticResource CardFrame}">
+                <StackLayout Spacing="15">
+                    <Label Style="{StaticResource BodyLabel}">
+                        <Label.Text>
+En Sensor Motors, valoramos tu privacidad y estamos comprometidos a proteger tus datos personales. Al utilizar nuestra aplicación, aceptas los siguientes términos y condiciones:
+                        </Label.Text>
+                    </Label>
+
+                    <Label Style="{StaticResource SubtitleLabel}" Text="Acceso a Datos de la Tarjeta"/>
+                    <Label Style="{StaticResource BodyLabel}" Text="Para facilitar tus compras y recomendaciones de productos, podremos acceder a la información de tu tarjeta de crédito o débito. Esta información será tratada con la máxima seguridad y solo se utilizará para procesar tus transacciones."/>
+
+                    <Label Style="{StaticResource SubtitleLabel}" Text="Ubicación"/>
+                    <Label Style="{StaticResource BodyLabel}" Text="Para ofrecerte un servicio más personalizado y recomendaciones sobre los lugares más cercanos donde adquirir productos para tu automóvil, accederemos a tu ubicación. Esto nos permitirá brindarte información relevante y en tiempo real."/>
+
+                    <Label Style="{StaticResource SubtitleLabel}" Text="Consentimiento"/>
+                    <Label Style="{StaticResource BodyLabel}" Text="Al utilizar nuestra aplicación, confirmas que has leído y comprendido este aviso de privacidad y que estás de acuerdo con el acceso a tus datos de tarjeta y ubicación, así como con nuestros términos y condiciones."/>
+
+                    <Label Style="{StaticResource SubtitleLabel}" Text="Seguridad de los Datos"/>
+                    <Label Style="{StaticResource BodyLabel}" Text="Implementamos medidas de seguridad adecuadas para proteger tus datos personales y garantizar que se manejen de manera responsable y conforme a la legislación vigente."/>
+
+                    <Label Style="{StaticResource BodyLabel}" TextColor="{StaticResource Primary}">
+                        <Label.Text>
+Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad, no dudes en contactarnos a través de SensorMotors@autocar.com.
+                        </Label.Text>
+                    </Label>
+
+                    <Label Style="{StaticResource BodyLabel}" FontAttributes="Italic">
+                        <Label.Text>
+Gracias por confiar en Sensor Motors para el cuidado de tu automóvil. ¡Estamos aquí para ayudarte!
+                        </Label.Text>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <!-- Botón Aceptar -->
+            <Button 
+                Text="Aceptar"
+                Style="{StaticResource PrimaryButton}"
+                Clicked="OnAceptarClicked"
+                Margin="0,20,0,40"/>
+
+            <!-- Indicador de Actividad -->
+            <ActivityIndicator 
+                x:Name="LoadingIndicator"
+                IsRunning="False"
+                IsVisible="False"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
