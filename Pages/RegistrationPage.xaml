@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CuidadoAutomotrizApp.Pages.RegistrationPage"
+             Title="Registro">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Título -->
+            <Label 
+                Text="Registro"
+                Style="{StaticResource TitleLabel}"/>
+
+            <Label 
+                Text="Regístrate en nuestra aplicación para recibir alertas y recomendaciones personalizadas para tu automóvil."
+                Style="{StaticResource BodyLabel}"
+                Margin="0,0,0,20"/>
+
+            <!-- Formulario -->
+            <Frame Style="{StaticResource CardFrame}">
+                <StackLayout Spacing="15">
+                    <!-- Nombre -->
+                    <StackLayout>
+                        <Label 
+                            Text="Nombre:"
+                            Style="{StaticResource BodyLabel}"/>
+                        <Entry 
+                            x:Name="NombreEntry"
+                            Placeholder="Tu nombre"
+                            Style="{StaticResource EntryStyle}"/>
+                    </StackLayout>
+
+                    <!-- Correo Electrónico -->
+                    <StackLayout>
+                        <Label 
+                            Text="Correo Electrónico:"
+                            Style="{StaticResource BodyLabel}"/>
+                        <Entry 
+                            x:Name="EmailEntry"
+                            Placeholder="Tu correo electrónico"
+                            Keyboard="Email"
+                            Style="{StaticResource EntryStyle}"/>
+                    </StackLayout>
+
+                    <!-- Modelo del Automóvil -->
+                    <StackLayout>
+                        <Label 
+                            Text="Modelo del Automóvil:"
+                            Style="{StaticResource BodyLabel}"/>
+                        <Entry 
+                            x:Name="ModeloEntry"
+                            Placeholder="Modelo del automóvil"
+                            Style="{StaticResource EntryStyle}"/>
+                    </StackLayout>
+
+                    <!-- Marca del Automóvil -->
+                    <StackLayout>
+                        <Label 
+                            Text="Marca del Automóvil:"
+                            Style="{StaticResource BodyLabel}"/>
+                        <Entry 
+                            x:Name="MarcaEntry"
+                            Placeholder="Marca del automóvil"
+                            Style="{StaticResource EntryStyle}"/>
+                    </StackLayout>
+
+                    <!-- Año del Automóvil -->
+                    <StackLayout>
+                        <Label 
+                            Text="Año del Automóvil:"
+                            Style="{StaticResource BodyLabel}"/>
+                        <Entry 
+                            x:Name="AnioEntry"
+                            Placeholder="Año del automóvil"
+                            Keyboard="Numeric"
+                            MaxLength="4"
+                            Style="{StaticResource EntryStyle}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Botón Registrar -->
+            <Button 
+                Text="Registrar"
+                Style="{StaticResource PrimaryButton}"
+                Clicked="OnRegistrarClicked"
+                Margin="0,20,0,40"/>
+
+            <!-- Indicador de Actividad -->
+            <ActivityIndicator 
+                x:Name="LoadingIndicator"
+                IsRunning="False"
+                IsVisible="False"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
